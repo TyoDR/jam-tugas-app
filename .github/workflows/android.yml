@@ -21,9 +21,10 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Berikan Izin Gradle
+    - name: Buat Gradle Wrapper & Berikan Izin
       run: |
         cd project_folder
+        gradle wrapper
         chmod +x gradlew
 
     - name: Build APK dengan Gradle
